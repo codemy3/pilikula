@@ -61,10 +61,8 @@ pilikula/
 
 ## 📸 Screenshots
 
-Add some visuals to bring your project to life:  
-- **Homepage**: Showcase the main attractions.  
-- **Attraction Page**: Highlight detailed information about a place.  
-- **404 Page**: Friendly error page.
+![image](https://github.com/user-attachments/assets/b0b91c4d-2253-4693-8f5d-e5ce232ee461)
+
 
 ---
 
