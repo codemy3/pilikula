@@ -62,6 +62,10 @@ pilikula/
 ## 📸 Screenshots
 
 ![image](https://github.com/user-attachments/assets/b0b91c4d-2253-4693-8f5d-e5ce232ee461)
+![image](https://github.com/user-attachments/assets/27fbc2ae-6a11-4c1f-b084-75e46a7e04ae)
+![image](https://github.com/user-attachments/assets/c3e705c8-73dc-4a74-b46d-27f6767195c1)
+
+
 
 
 ---
