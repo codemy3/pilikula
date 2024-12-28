@@ -64,10 +64,6 @@ pilikula/
 ![image](https://github.com/user-attachments/assets/b0b91c4d-2253-4693-8f5d-e5ce232ee461)
 ![image](https://github.com/user-attachments/assets/27fbc2ae-6a11-4c1f-b084-75e46a7e04ae)
 ![image](https://github.com/user-attachments/assets/c3e705c8-73dc-4a74-b46d-27f6767195c1)
-
-
-
-
 ---
 
 ## 🌱 Future Enhancements
@@ -90,14 +86,7 @@ Contributions are welcome! Here’s how you can help:
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙌 Acknowledgments
 
 - **Flask**: For providing an easy and robust web framework.
-- **Bootstrap**: For modern and responsive web design elements.
 - **Contributors**: Thank you to everyone who helped enhance this project.
