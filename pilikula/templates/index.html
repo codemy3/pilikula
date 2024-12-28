@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilikula Visiting Places</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+   
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Discover Pilikula's Top Attractions</h1>
+            <p>Uncover the hidden gems and must-see spots in Pilikula.</p>
+        </div>
+    </header>
+    
+   
+    <div class="card-container">
+        {% for place in places %}
+        <div class="card">
+            <a href="{{ url_for('place_detail', place_id=place['id']) }}">
+                <img src="{{ url_for('static', filename='images/' + place['image']) }}" alt="{{ place['name'] }}">
+                <h3>{{ place['name'] }}</h3>
+                <p>{{ place['description'] }}</p>
+                <p><strong>Timings:</strong> {{ place['timing'] }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

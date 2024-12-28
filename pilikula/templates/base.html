@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ place['name'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ place['name'] }}</h1>
+    </header>
+
+    <div class="place-details">
+        <img src="{{ url_for('static', filename=place['image']) }}" alt="{{ place['name'] }}">
+        <div class="info">
+            <p>{{ place['details'] }}</p>
+            <p><strong>Timings:</strong> {{ place['timing'] }}</p>
+            <p><a href="{{ place['website'] }}" target="_blank">Visit Official Website</a></p>
+        </div>
+    </div>
+
+    <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilikula</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+<h1>Pilikula Visiting Places</h1>
+</header>
+
+
+        <h1>Pilikula Visiting Places</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Pilikula Project</p>
+       
+</body>
+</html>
