@@ -31,7 +31,7 @@ places = [
             <h4>Accessibility:</h4> The park is wheelchair accessible and has facilities for differently-abled visitors.
 
              <br/><strong>Visitor Guidelines</strong><br/> 
-                 Do not feed or disturb the animals.  
+                 Do not🚫 feed or disturb the animals.  
                 Use the designated bins to dispose of waste and help maintain the park's cleanliness.
 
             <br/><h4>Why Visit Pilikula Biological Park?</h4><br/>
