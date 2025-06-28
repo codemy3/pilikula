@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ place['name'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #000;
+        }
+        .main-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-section img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        strong {
+            color: #ffcc00;
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">{{ place['name'] }}</h1>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='images/' + place['image']) }}" alt="{{ place['name'] }}">
+        </div>
+        <h3>Description</h3>
+        <p>{{ place['description'] }}</p>
+
+        <h3>Timings</h3>
+        <p>{{ place['timing'] }}</p>
+
+        <h3>Details</h3>
+        <p>{{ place['details'] | safe }}</p>
+
+        <h3>Location</h3>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+       
+        var latitude = parseFloat("{{ place['latitude'] | safe }}");
+        var longitude = parseFloat("{{ place['longitude'] | safe }}");
+
+       
+        var map = L.map('map').setView([latitude, longitude], 15);
+
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+       
+        L.marker([latitude, longitude])
+            .bindPopup("{{ place['name'] }}")
+            .addTo(map)
+            .on('click', function() {
+              
+                window.open(`https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`, '_blank');
+            });
+    </script>
+</body>
+</html>
